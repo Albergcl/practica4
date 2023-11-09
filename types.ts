@@ -17,19 +17,20 @@ export type Coche = {
     tipoMotor: MOTORTYPE,
     marca: string,
     matricula: string,
-    propietario: Cliente
+    propietario: string,
     id: string
 }
 
 export type Concesionario = {
-    coches: Coche[],
-    clientes: Cliente[],
+    cochesID: string[],
+    clientesID: string[],
     id: string
 }
 
 export type Cliente = {
     dinero: number,
     dni: string,
-    nombre: string
+    nombre: string,
+    coches: string[],
     id: string
 }
