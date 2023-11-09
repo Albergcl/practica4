@@ -13,7 +13,13 @@ export const enviarCocheAConcesionario = async(req: Request, res: Response) => {
             return;
         }
 
+        if (concesionario.cantidadCoches >= 10) {
+            res.status(200).send("Numero maximo de coches alcanzado");
+            return;
+        }
+
         concesionario.cochesID.push(coche._id);
+        concesionario.cantidadCoches += 1;
         await concesionario.save();
 
         res.status(200).send("Coche enviado al concesionario con exito");

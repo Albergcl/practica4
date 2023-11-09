@@ -24,6 +24,7 @@ export type Coche = {
 export type Concesionario = {
     cochesID: string[],
     clientesID: string[],
+    cantidadCoches: number,
     id: string
 }
 

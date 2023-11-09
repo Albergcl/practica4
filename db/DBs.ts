@@ -28,6 +28,7 @@ const concesionarioSchema = new Schema(
   {
     coches: {type: mongoose.Types.ObjectId, ref: "Coche", required: true},
     clientes: {type: mongoose.Types.ObjectId, ref: "Cliente", required: true},
+    cantidadCoches: { type: Number, default: 0 },
     id: {type: String, required: true}
   }
 );
